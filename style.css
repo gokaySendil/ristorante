@@ -137,6 +137,10 @@ header {
   text-decoration: underline 1.5px white;
   text-underline-offset: 0.5em;
 }
+.nav-list li a.active-nav {
+  text-decoration: underline 1.5px white;
+  text-underline-offset: 0.5em;
+}
 
 .brand-logo {
   margin-left: 1rem;
@@ -253,6 +257,67 @@ header {
   font-weight: 400;
   letter-spacing: -0.04rem;
 }
+/* END OF HERO SECTION */
+/* GALLERY SECTION */
+
+.gallery-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  outline: 1px solid blue;
+}
+.section-title {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 2.5rem;
+  font-family: Figtree;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.025rem;
+}
+.gallery-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  
+}
+.gallery-grids {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 4rem;
+  background-color: #bf2926;
+  align-content: start;
+  height: 100% !important;
+  width: 100% !important;
+  padding: 6.5rem 8rem;
+  outline: 1px dashed white;
+  
+}
+.gallery-grids a{
+  width: 279px;
+  height: 141px;
+  border: 2px solid white;
+  outline: 1px solid blue;
+  justify-self: center;
+}
+.gallery-grids a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+@media only screen and (min-width: 50em) and (max-width: 70em) {
+	.gallery-grids{
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    
+  }
+}
 @media (max-width: 50em) {
 
   /* NAVIGATION MOBILE*/
@@ -261,26 +326,21 @@ header {
     position: fixed;
     width: 100vw;
     z-index: 999;
-
   }
 
   .primary-navigation {
     margin-right: 0rem;
   }
-
   .brand-logo {
     font-size: 1rem;
   }
-
   .nav-wrapper {
     font-family: "Montserrat", sans-serif;
     position: relative;
   }
-
   .nav-menu-btn {
     display: none;
   }
-
   .mobile-nav-toggle {
     font-size: large;
     display: block;
@@ -315,7 +375,6 @@ header {
     /*box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);*/
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-
   .nav-list {
     list-style: none;
     display: grid;
@@ -324,7 +383,6 @@ header {
     font-weight: bold;
     padding: 0;
   }
-
   /* NAVIGATION MOBILE END*/
   .hero-container .even-columns {
     width: 100% !important;
@@ -334,7 +392,6 @@ header {
     grid-auto-flow: row;
     flex-shrink: 0;
   }
-
   .button-container {
     width: 100%;
     display: inline-flex;
@@ -366,4 +423,23 @@ header {
   .slogan {
     font-size: 1.2rem;
   }
+  /* END OF HERO SECTION */
+   /* GALLERY SECTION */
+   .gallery-section{
+    width: 100vw !important;
+    height: 100% !important;
+  }
+  .gallery-section .container{
+    margin-top: 40%;
+    text-align: center;
+  }
+  .gallery-grids{
+    margin: 0;
+    padding-top: 20px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  
 }
