@@ -266,7 +266,7 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   min-height: 90vh;
-  outline: 1px solid blue;
+ 
 }
 .section-title {
   color: #fff;
@@ -284,8 +284,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
-  
 }
 .gallery-grids {
   display: grid;
@@ -296,14 +294,14 @@ header {
   height: 100% !important;
   width: 100% !important;
   padding: 6.5rem 8rem;
-  outline: 1px dashed white;
+  
   
 }
 .gallery-grids a{
   width: 279px;
   height: 141px;
   border: 2px solid white;
-  outline: 1px solid blue;
+  
   justify-self: center;
 }
 .gallery-grids a img {
@@ -315,11 +313,9 @@ header {
 @media only screen and (min-width: 50em) and (max-width: 70em) {
 	.gallery-grids{
     grid-template-columns: repeat(2, minmax(250px, 1fr));
-    
   }
 }
 @media (max-width: 50em) {
-
   /* NAVIGATION MOBILE*/
   header {
     background-color: #D9302D;
@@ -400,11 +396,9 @@ header {
     justify-content: center;
     gap: 2.12rem;
   }
-
   .hero-section {
     padding: 0;
   }
-
   .hero-img {
     width: 100%;
     height: auto !important;
