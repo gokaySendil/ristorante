@@ -1,97 +1,368 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;700&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;700&display=swap");
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+/* Box sizing rules */
+/* https://andy-bell.co.uk/a-modern-css-reset/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
   min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #D9302D;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-.card {
-  padding: 2em;
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+/* GENERAL WIDTH ALLIGNMENT */
+.container {
+  --max-width: 1200px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* NAVIGATION */
+header {
+  height: 95px;
+  border-bottom: 2px solid white;
+}
+
+.header-container {
+  height: 100% !important;
+}
+
+.nav-wrapper {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100%;
+}
+
+.primary-navigation {
+  color: white;
+  margin-right: 8rem;
+}
+
+.mobile-nav-toggle {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  display: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.nav-list li a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline 1.5px white;
+  text-underline-offset: 0.5em;
+}
+
+.brand-logo {
+  margin-left: 1rem;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: white;
+}
+
+/* END OF NAVIGATION*/
+/* BUTTON */
+.btn{
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  height: 3em;
+  width: 124px;
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+}
+.primary-btn {
+  background-color: white;
+  color: #D9302D;
+}
+.secondary-btn{
+  background-color: transparent;
+  color: white;
+
+}
+
+.primary-btn:hover {
+  background-color:#D9302D;
+  color: white;
+}
+.secondary-btn:hover{
+  background-color:white;
+  color: #D9302D;
+}
+
+/* BUTTON END */
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  min-width: 0;
+  height: 100% !important;
+}
+
+.button-container {
+  margin-top: 1rem;
+  display: inline-flex;
+  gap: 2.12rem;
+}
+
+.hero-section {
+  background: #D9302D;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D9302D, #D9302D);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D9302D, #D9302D);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 4rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  flex-wrap: wrap;
+
+}
+
+.box {
+  --mask:
+    radial-gradient(29.67px at 40.30px 50%, #000 99%, #0000 101%) 0 calc(50% - 52px)/51% 104px repeat-y,
+    radial-gradient(29.67px at -14.3px 50%, #0000 99%, #000 101%) 26px 50%/calc(51% - 26px) 104px repeat-y,
+    radial-gradient(29.67px at calc(100% - 40.30px) 50%, #000 99%, #0000 101%) 100% calc(50% - 52px)/51% 104px repeat-y,
+    radial-gradient(29.67px at calc(100% + 14.30px) 50%, #0000 99%, #000 101%) calc(100% - 26px) 50%/calc(51% - 26px) 104px repeat-y;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.hero-slogan {
+  color: white;
+  font-size: 4rem;
+  font-family: Figtree;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 4.375rem;
+  letter-spacing: -0.04rem;
+}
+
+.slogan {
+  color: white;
+  font-size: 2rem;
+  font-family: Figtree;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.04rem;
+}
+@media (max-width: 50em) {
+
+  /* NAVIGATION MOBILE*/
+  header {
+    background-color: #D9302D;
+    position: fixed;
+    width: 100vw;
+    z-index: 999;
+
   }
-  a:hover {
-    color: #747bff;
+
+  .primary-navigation {
+    margin-right: 0rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .brand-logo {
+    font-size: 1rem;
+  }
+
+  .nav-wrapper {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+  }
+
+  .nav-menu-btn {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    font-size: large;
+    display: block;
+    position: fixed;
+    top: 2.7rem;
+    right: 2rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+
+  .primary-navigation[data-visible] {
+    display: block;
+
+  }
+
+  .primary-navigation {
+    background-color: #D9302D;
+    position: fixed;
+    display: none;
+    padding: 4rem;
+    /* inset : top right bottom left*/
+    inset: 7rem 1rem auto;
+    max-width: 25rem;
+    margin-left: auto;
+    border-radius: 0.25rem;
+    /*box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);*/
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+  }
+
+  /* NAVIGATION MOBILE END*/
+  .hero-container .even-columns {
+    width: 100% !important;
+    height: 100% !important;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: row;
+    flex-shrink: 0;
+  }
+
+  .button-container {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2.12rem;
+  }
+
+  .hero-section {
+    padding: 0;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .column-1 {
+    margin-top: 40%;
+    text-align: center;
+  }
+
+  .hero-slogan {    
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
   }
 }
