@@ -1,0 +1,96 @@
+/* DESKTOP SIZE STYLES */
+.button-container {
+    margin-top: 1rem;
+    display: inline-flex;
+    gap: 2.12rem;
+  }
+  
+  .hero-section {
+    background: #d9302d;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d9302d, #d9302d);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d9302d, #d9302d);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    --mask: radial-gradient(29.67px at 40.3px 50%, #000 99%, #0000 101%) 0
+        calc(50% - 52px) / 51% 104px repeat-y,
+      radial-gradient(29.67px at -14.3px 50%, #0000 99%, #000 101%) 26px 50% /
+        calc(51% - 26px) 104px repeat-y,
+      radial-gradient(29.67px at calc(100% - 40.3px) 50%, #000 99%, #0000 101%)
+        100% calc(50% - 52px) / 51% 104px repeat-y,
+      radial-gradient(29.67px at calc(100% + 14.3px) 50%, #0000 99%, #000 101%)
+        calc(100% - 26px) 50% / calc(51% - 26px) 104px repeat-y;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+  
+  .hero-slogan {
+    color: white;
+    font-size: 4rem;
+    font-family: Figtree;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 4.375rem;
+    letter-spacing: -0.04rem;
+  }
+  
+  .slogan {
+    color: white;
+    font-size: 2rem;
+    font-family: Figtree;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.04rem;
+  }
+
+
+
+/* MOBILE SIZE STYLES */
+@media (max-width:50em){
+    .even-columns {
+        width: 100% !important;
+        height: 100% !important;
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: row;
+        flex-shrink: 0;
+      }
+      .button-container {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2.12rem;
+      }
+      .hero-section {
+        padding: 0;
+      }
+      .hero-img {
+        width: 100%;
+        height: auto !important;
+      }
+    
+      .column-1 {
+        margin-top: 40%;
+        text-align: center;
+      }
+    
+      .hero-slogan {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+    
+      .slogan {
+        font-size: 1.2rem;
+      }
+}
