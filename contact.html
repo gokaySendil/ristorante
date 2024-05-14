@@ -43,37 +43,30 @@
     <title>Pizzeria Vecchia Tavernola</title>
   </head>
   <body>
-    
-    <header class="primary-header">
-      <div class="container header-container">
-        <div class="nav-wrapper">
-          <a class="brand-logo" href="index.html">Pizzeria Vecchia Tavernola</a>
-          <button
-            class="mobile-nav-toggle"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-          >
-            <i class="fas fa-bars icon-menu" aria-hidden="true"></i>
-            <i class="fas fa-times icon-close" aria-hidden="true"></i>
-            <span class="hidden">Menu</span>
-          </button>
-          <nav id="primary-navigation" class="primary-navigation">
-            <ul aria-label="Primary" role="list" class="nav-list">
-              <li class="nav-link">
-                <a class="anchor-nav" href="#about">About</a>
-              </li>
-              <li class="nav-link">
-                <a class="anchor-nav" href="./gallery.html">Gallery</a>
-              </li>
-              <li class="nav-link">
-                <a class="anchor-nav" href="./contact.html">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- <button class="primary-btn btn nav-menu-btn">MENU</button> -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" id="navbar-logo"><i class="fa-regular fa-lemon"></i> Pizzeria Vecchia Tavernola</a>
+        <div class="navbar-toogle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="/about.html" class="navbar-link"> About Us </a>
+          </li>
+          <li class="navbar-item">
+            <a href="/gallery.html" class="navbar-link"> Galery </a>
+          </li>
+          <li class="navbar-item">
+            <a href="/menu.html" class="navbar-link"> Menu </a>
+          </li>
+          <li class="navbar-item">
+            <a href="/contact.html" class="navbar-link"> Contact Us </a>
+          </li>
+        </ul>
       </div>
-    </header>
+    </nav>    
     <!--*********************** Header End *********************** -->
     <main>
       <section class="contact-section">

@@ -43,7 +43,7 @@
     <title>Pizzeria Vecchia Tavernola</title>
   </head>
   <body>
-    <header class="primary-header">
+    <!-- <header class="primary-header">
       <div class="container header-container">
         <div class="nav-wrapper">
           <a class="brand-logo" href="index.html">Pizzeria Vecchia Tavernola</a>
@@ -59,7 +59,7 @@
           <nav id="primary-navigation" class="primary-navigation">
             <ul aria-label="Primary" role="list" class="nav-list">
               <li class="nav-link">
-                <a class="anchor-nav" href="#about">About</a>
+                <a class="anchor-nav" href="/about.html">About</a>
               </li>
               <li class="nav-link">
                 <a class="anchor-nav" href="./gallery.html">Gallery</a>
@@ -69,10 +69,37 @@
               </li>
             </ul>
           </nav>
-          <!-- <button class="primary-btn btn nav-menu-btn">MENU</button> -->
+           <button class="primary-btn btn nav-menu-btn">MENU</button> 
         </div>
       </div>
-    </header>
+    </header> -->
+    <!--Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" id="navbar-logo"
+          ><i class="fa-regular fa-lemon"></i> Pizzeria Vecchia Tavernola</a
+        >
+        <div class="navbar-toogle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="/about.html" class="navbar-link"> About Us </a>
+          </li>
+          <li class="navbar-item">
+            <a href="/gallery.html" class="navbar-link"> Galery </a>
+          </li>
+          <li class="navbar-item">
+            <a href="/menu.html" class="navbar-link"> Menu </a>
+          </li>
+          <li class="navbar-item">
+            <a href="/contact.html" class="navbar-link"> Contact Us </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!--*********************** Header End *********************** -->
     <main>
       <!--*********************** HERO SECTION *********************** -->
@@ -98,13 +125,50 @@
         </div>
       </section>
       <!--*********************** HERO SECTION END *********************** -->
+
+      <!-- Our Favorites -->
+      <div class="favorites">
+        <h1>Our Favorites</h1>
+        <div class="favorites-container">
+          <div class="favorites-card">
+            <h2>Food Name</h2>
+          </div>
+          <div class="favorites-card">
+            <h2>Food Name</h2>
+          </div>
+          <div class="favorites-card">
+            <h2>Food Name</h2>
+          </div>
+          <div class="favorites-card">
+            <h2>Food Name</h2>
+          </div>
+        </div>
+      </div>
     </main>
-    <script src="main.js"></script>
+
+    <!-- Footer Section -->
+    <div class="footer-wrapper">
+      <div class="social-media">
+        <div class="social-media-wrapper">
+          <p class="website-rights">© SERVICES 2024. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/vecchiatavernola/" class="social-icon-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+              <a href="https://www.facebook.com/p/Vecchia-Tavernola-100063584620272/" class="social-icon-link" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"
       integrity="sha512-dSI4QnNeaXiNEjX2N8bkb16B7aMu/8SI5/rE6NIa3Hr/HnWUO+EAZpizN2JQJrXuvU7z0HTgpBVk/sfGd0oW+w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>
