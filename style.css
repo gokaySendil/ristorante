@@ -503,3 +503,9 @@ select {
     padding-left: 10px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .website-rights {
+    font-size: 15px;
+  }
+}
